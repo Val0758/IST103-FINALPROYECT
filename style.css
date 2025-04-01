@@ -1,15 +1,34 @@
 /* aqui toca agregar todo el diseño que tengo en html y ajustarlo al estilo css */
+:root{
+  
+  --BG--: hsl(0, 0%, 100%);
+  --top--BG--: hsl(225, 100%, 98%);
+  --card--: hsl(227, 47%, 96%);
+  --text--1: hsl(230, 17%, 14%);
+  --text--2: hsl(228, 12%, 44%);
+
+
+}
+
+.dark-mode{
+  --BG--: hsl(230, 17%, 14%);
+  --top--BG--: hsl(232, 19%, 15%);
+  --card--: hsl(228, 28%, 20%);
+  --text--1: hsl(0, 0%, 100%);
+  --text--2: hsl(228, 34%, 66%);
+  
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial', sans;
   }
   
   body {
-    background-color: #f5f7fa;
-    color: #1e202a;
+    background-color: var(--BG--);
+    color: var(--text--1);
     padding: 2rem;
   }
   
@@ -37,12 +56,12 @@
   }
   
   .card {
-    background-color: white;
+    background-color: var(--card--);
     border-top: 4px solid;
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px var(--top--BG--);
   }
   
   .facebook { border-color: #1877f2; }
@@ -72,11 +91,11 @@
   }
   
   .overview-card {
-    background-color: white;
+    background-color: var(--card--);
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    box-shadow: 0 0 8px var(--top--BG--);
   }
   
   .overview-card p {
@@ -85,7 +104,7 @@
   
   .small {
     font-size: 0.8rem;
-    color: gray;
+    color: var(--text--1);
   }
   
   .positive { color: green; }
