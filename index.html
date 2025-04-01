@@ -1,171 +1,63 @@
 <!-- Agrege el html e hice los divs de los cuadros de texto, me falta agreagr textos e logos de las apps
  admeas necesitamos pasar el estilo a css  y agregar el script-->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Social Media</title>
-  <style>
-    * {
-      margin: 10;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      background-color: #f5f7fa;
-      color: #1e202a;
-      padding: 2rem;
-    }
-
-    .dashboard {
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .dashboard-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 2rem;
-    }
-
-    .dashboard-header h1 {
-      font-size: 2rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .card {
-      background-color: white;
-      border-top: 4px solid;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-
-    .facebook { border-color: #1877f2; }
-    .twitter { border-color: #1da1f2; }
-    .instagram { border-color: #e1306c; }
-    .youtube { border-color: #ff0000; }
-
-    .followers-count {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin: 0.5rem 0;
-    }
-
-    .today {
-      color: green;
-      font-size: 0.9rem;
-    }
-
-    .today.negative {
-      color: red;
-    }
-
-    .overview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .overview-card {
-      background-color: white;
-      padding: 1rem;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 8px rgba(0,0,0,0.05);
-    }
-
-    .overview-card p {
-      margin-top: 0.5rem;
-    }
-
-    .small {
-      font-size: 0.8rem;
-      color: gray;
-    }
-
-    .positive { color: green; }
-    .negative { color: red; }
-  </style>
-</head>
-<body>
-  <div class="dashboard">
-    <div class="dashboard-header">
-      <h1>Social Media Dashboard</h1>
-     
-    </div>
-
-    <div class="cards">
-      <div class="card facebook">
-    
-        <p>FOLLOWERS</p>
-      
-      </div>
-      <div class="card twitter">
-      
-        <p>FOLLOWERS</p>
-      
-      </div>
-      <div class="card instagram">
-       
-    
-        <p>FOLLOWERS</p>
-
-      </div>
-      <div class="card youtube">
-      
-        <p>SUBSCRIBERS</p>
-      </div>
-    </div>
-
-    <h2 style="margin-bottom: 1rem;">Overview - Today</h2>
-
-    <div class="overview">
-      <div class="overview-card">
-        <h3>Page Views</h3>
-      </div>
-      <div class="overview-card">
-        <h3>Likes (Facebook)</h3>
-      </div>
-      <div class="overview-card">
-        <h3>Likes (Instagram)</h3>
-   
-      </div>
-      <div class="overview-card">
-        <h3>Profile Views</h3>
-      
-      </div>
-      <div class="overview-card">
-        <h3>Retweets</h3>
-     
-      </div>
-      <div class="overview-card">
-        <h3>Likes (Twitter)</h3>
-       
-      </div>
-      <div class="overview-card">
-        <h3>Likes (YouTube)</h3>
-       
-      </div>
-      <div class="overview-card">
-        <h3>Total Views (YouTube)</h3>
-      
-        
-      </div>
-    </div>
-  </div>
-</body>
-</html>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Social Media</title>
+   <link rel="stylesheet" href="style.css"> 
+ </head>
+ <body>
+   <div class="dashboard">
+     <div class="dashboard-header">
+       <h1>Social Media Dashboard</h1>
+     </div>
+ 
+     <div class="cards">
+       <div class="card facebook">
+         <p>FOLLOWERS</p>
+       </div>
+       <div class="card twitter">
+         <p>FOLLOWERS</p>
+       </div>
+       <div class="card instagram">
+         <p>FOLLOWERS</p>
+       </div>
+       <div class="card youtube">
+         <p>SUBSCRIBERS</p>
+       </div>
+     </div>
+ 
+     <h2 style="margin-bottom: 1rem;">Overview - Today</h2>
+ 
+     <div class="overview">
+       <div class="overview-card">
+         <h3>Page Views</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Likes (Facebook)</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Likes (Instagram)</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Profile Views</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Retweets</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Likes (Twitter)</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Likes (YouTube)</h3>
+       </div>
+       <div class="overview-card">
+         <h3>Total Views (YouTube)</h3>
+       </div>
+     </div>
+   </div>
+ </body>
+ </html>
+ 
