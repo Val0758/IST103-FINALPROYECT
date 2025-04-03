@@ -1,0 +1,161 @@
+/* aqui toca agregar todo el diseño que tengo en html y ajustarlo al estilo css */
+:root{
+  
+  --BG--: hsl(0, 0%, 100%);
+  --top--BG--: hsl(225, 100%, 98%);
+  --card--: hsl(227, 47%, 96%);
+  --text--1: hsl(230, 17%, 14%);
+  --text--2: hsl(228, 12%, 44%);
+  --btn--: hsl(210, 78%, 56%);
+
+
+}
+
+.dark-mode{
+  --BG--: hsl(230, 17%, 14%);
+  --top--BG--: hsl(232, 19%, 15%);
+  --card--: hsl(228, 28%, 20%);
+  --text--1: hsl(0, 0%, 100%);
+  --text--2: hsl(228, 34%, 66%);
+  --btn--: hsl(146, 68%, 55%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans;
+  }
+  
+  body {
+    background-color: var(--BG--);
+    color: var(--text--1);
+    padding: 2rem;
+  }
+  
+  .dashboard {
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .card {
+    background-color: var(--card--);
+    border-top: 4px solid;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--top--BG--);
+  }
+  
+  .facebook { border-color: #1877f2; }
+  .twitter { border-color: #1da1f2; }
+  .instagram { border-color: #e1306c; }
+  .youtube { border-color: #ff0000; }
+  
+  .followers-count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+  }
+  
+  .today {
+    color: green;
+    font-size: 0.9rem;
+  }
+  
+  .today.negative {
+    color: red;
+  }
+  
+  .overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .overview-card {
+    background-color: var(--card--);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 8px var(--top--BG--);
+  }
+  
+  .overview-card p {
+    margin-top: 0.5rem;
+  }
+  
+  .small {
+    font-size: 0.8rem;
+    color: var(--text--1);
+  }
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--btn--);
+    border-radius: 34px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: var(--top--BG--);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: var(--top--BG--);
+}
+  
+  .positive { color: green; }
+  .negative { color: red; }
+  
