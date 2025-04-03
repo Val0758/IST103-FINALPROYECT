@@ -1,73 +1,100 @@
 <!-- Agrege el html e hice los divs de los cuadros de texto, me falta agreagr textos e logos de las apps
  admeas necesitamos pasar el estilo a css  y agregar el script-->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>Social Media</title>
-   <link rel="stylesheet" href="style.css"> 
- </head>
- <body>
-   <div class="dashboard">
-     <div class="dashboard-header">
-       <h1>Social Media Dashboard</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <div class="dashboard-header">
+        <h1>Social Media Dashboard</h1>
 
-       <div class="toggle-container">
-        <span >Dark Mode</span>
-        <label class="toggle-switch">
-            <input type="checkbox" class="theme">
+        <div class="toggle-container">
+          <span>Dark Mode</span>
+          <label class="toggle-switch">
+            <input type="checkbox" class="theme" />
             <span class="slider"></span>
-        </label>
-    </div>      
-     </div>
- 
-     <div class="cards">
-       <div class="card facebook">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card twitter">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card instagram">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card youtube">
-         <p>SUBSCRIBERS</p>
-       </div>
-     </div>
- 
-     <h2 style="margin-bottom: 1rem;">Overview - Today</h2>
- 
-     <div class="overview">
-       <div class="overview-card">
-         <h3>Page Views</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Facebook)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Instagram)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Profile Views</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Retweets</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Twitter)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (YouTube)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Total Views (YouTube)</h3>
-       </div>
-     </div>
-   </div>
-   <script src="js/script.js"></script>
+          </label>
+        </div>
+      </div>
 
- </body>
- </html>
- 
+      <div class="cards">
+        <div class="card facebook">
+          <p class="facebook-user"></p>
+          <p class="facebook-followers"></p>
+          <p>FOLLOWERS</p>
+          <p class="facebook-update"></p>
+        </div>
+        <div class="card twitter">
+          <p class="twitter-user"></p>
+          <p class="twitter-followers"></p>
+          <p>FOLLOWERS</p>
+          <p class="twitter-update"></p>
+        </div>
+        <div class="card instagram">
+          <p class="instagram-user"></p>
+          <p class="instagram-followers"></p>
+          <p>FOLLOWERS</p>
+          <p class="instagram-update"></p>
+        </div>
+        <div class="card youtube">
+          <p class="youtube-user"></p>
+          <p class="youtube-followers"></p>
+          <p>SUBSCRIBERS</p>
+          <p class="youtube-update"></p>
+        </div>
+      </div>
+
+      <h2 style="margin-bottom: 1rem">Overview - Today</h2>
+
+      <div class="overview">
+        <div class="overview-card">
+          <h3>Page Views</h3>
+          <p class="viewsF"></p>
+          <p class="views-pF"></p>
+          <p></p>
+        </div>
+        <div class="overview-card">
+          <h3>Likes (Facebook)</h3>
+          <p class="likesF"></p>
+          <p class="likes-pF"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Likes (Instagram)</h3>
+          <p class="likesI"></p>
+          <p class="likes-pI"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Profile Views</h3>
+          <p class="viewsI"></p>
+          <p class="views-pI"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Retweets</h3>
+          <p class="retweetsT"></p>
+          <p class="retweets-pT"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Likes (Twitter)</h3>
+          <p class="likesT"></p>
+          <p class="likes-pT"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Likes (YouTube)</h3>
+          <p class="likesY"></p>
+          <p class="likes-pY"></p>
+        </div>
+        <div class="overview-card">
+          <h3>Total Views (YouTube)</h3>
+          <p class="viewsY"></p>
+          <p class="views-pY"></p>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
