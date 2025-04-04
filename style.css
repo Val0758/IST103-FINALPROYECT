@@ -185,14 +185,14 @@ input:checked + .slider:before {
   border-color: var(--youtube);
 }
 
-/* Texto principal de seguidores */
+
 .followers-count {
   font-size: 3rem;
   font-weight: 700;
   margin: 0.2rem 0;
 }
 
-/* "FOLLOWERS" / "SUBSCRIBERS" */
+
 .small {
   font-size: 0.7rem;
   color: var(--text-secondary);
@@ -201,7 +201,7 @@ input:checked + .slider:before {
   margin-bottom: 1rem;
 }
 
-/* Cambios (Today) */
+
 .today {
   font-size: 0.85rem;
   font-weight: 700;
@@ -215,7 +215,7 @@ input:checked + .slider:before {
   font-size: 1rem;
 }
 
-/* Verde y rojo */
+
 .today.positive {
   color: var(--lime-green);
 }
