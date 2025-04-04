@@ -1,161 +1,320 @@
-/* aqui toca agregar todo el diseño que tengo en html y ajustarlo al estilo css */
-:root{
-  
-  --BG--: hsl(0, 0%, 100%);
-  --top--BG--: hsl(225, 100%, 98%);
-  --card--: hsl(227, 47%, 96%);
-  --text--1: hsl(230, 17%, 14%);
-  --text--2: hsl(228, 12%, 44%);
-  --btn--: hsl(210, 78%, 56%);
+/* 
+   Versión muy fiel al diseño original de Frontend Mentor
+   "Social Media Dashboard with Theme Switcher"
+*/
 
-
-}
-
-.dark-mode{
-  --BG--: hsl(230, 17%, 14%);
-  --top--BG--: hsl(232, 19%, 15%);
-  --card--: hsl(228, 28%, 20%);
-  --text--1: hsl(0, 0%, 100%);
-  --text--2: hsl(228, 34%, 66%);
-  --btn--: hsl(146, 68%, 55%);
-}
-
+/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans;
-  }
-  
-  body {
-    background-color: var(--BG--);
-    color: var(--text--1);
-    padding: 2rem;
-  }
-  
-  .dashboard {
-    max-width: 1200px;
-    margin: auto;
-  }
-  
-  .dashboard-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .dashboard-header h1 {
-    font-size: 2rem;
-  }
-  
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-  }
-  
-  .card {
-    background-color: var(--card--);
-    border-top: 4px solid;
-    padding: 1.5rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px var(--top--BG--);
-  }
-  
-  .facebook { border-color: #1877f2; }
-  .twitter { border-color: #1da1f2; }
-  .instagram { border-color: #e1306c; }
-  .youtube { border-color: #ff0000; }
-  
-  .followers-count {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0.5rem 0;
-  }
-  
-  .today {
-    color: green;
-    font-size: 0.9rem;
-  }
-  
-  .today.negative {
-    color: red;
-  }
-  
-  .overview {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-  
-  .overview-card {
-    background-color: var(--card--);
-    padding: 1rem;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 8px var(--top--BG--);
-  }
-  
-  .overview-card p {
-    margin-top: 0.5rem;
-  }
-  
-  .small {
-    font-size: 0.8rem;
-    color: var(--text--1);
-  }
-  .toggle-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUENTE ESTRUCTURAL */
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ---- VARIABLES DE COLOR ---- */
+/* Light Theme (por defecto) */
+:root {
+  --very-pale-blue-top-bg: hsl(225, 100%, 98%);
+  --white-bg: hsl(0, 0%, 100%);
+  --card-bg: hsl(227, 47%, 96%);
+  --dark-desaturated-blue: hsl(228, 12%, 44%);
+  --very-dark-blue: hsl(230, 17%, 14%);
+  --toggle-light: hsl(230, 22%, 74%);
+
+  /* Para flechas */
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  /* Redes */
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --youtube: hsl(348, 97%, 39%);
+  /* Instagram se hace con gradiente */
+
+  /* Por defecto */
+  --background: var(--white-bg);
+  --top-background: var(--very-pale-blue-top-bg);
+  --text-primary: var(--very-dark-blue);
+  --text-secondary: var(--dark-desaturated-blue);
+  --toggle-bg: var(--toggle-light);
+}
+
+/* Dark Theme */
+body.dark-mode {
+  --background: hsl(230, 17%, 14%);
+  --top-background: hsl(232, 19%, 15%);
+  --card-bg: hsl(228, 28%, 20%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --toggle-bg: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+/* ---- ESTILOS GLOBALES ---- */
+body {
+  background: var(--top-background);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+/* CABECERA (top bar) */
+.top-bar {
+  padding: 2rem 10%;
+  background: var(--top-background);
+}
+
+/* Centrar contenido dentro de la cabecera */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título y texto de total followers */
+.header-texts h1 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.header-texts .total-followers {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* Contenedor principal con fondo BLANCO (o modo oscuro) */
+.dashboard {
+  background: var(--background);
+  margin: -3rem 10% 2rem 10%; /* Subimos el fondo para que "flote" */
+  border-radius: 8px;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Toggle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .toggle-switch {
-    position: relative;
-    width: 50px;
-    height: 25px;
+  position: relative;
+  width: 50px;
+  height: 25px;
 }
 
 .toggle-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: var(--btn--);
-    border-radius: 34px;
-    transition: 0.3s;
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--toggle-bg);
+  border-radius: 34px;
+  transition: 0.3s;
 }
 
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 18px;
-    width: 18px;
-    left: 4px;
-    bottom: 3px;
-    background-color: var(--top--BG--);
-    border-radius: 50%;
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3px;
+  background: var(--background);
+  border-radius: 50%;
+  transition: 0.3s;
 }
-
-
 
 input:checked + .slider:before {
-    transform: translateX(24px);
-    background-color: var(--top--BG--);
+  transform: translateX(24px);
 }
-  
-  .positive { color: green; }
-  .negative { color: red; }
-  
+
+/* ---- TARJETAS PRINCIPALES ---- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-top: 4px solid;
+  border-radius: 5px;
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.card-top i {
+  font-size: 1.4rem;
+}
+
+/* Bordes por red social */
+.facebook {
+  border-color: var(--facebook);
+}
+.twitter {
+  border-color: var(--twitter);
+}
+.instagram {
+  /* Gradiente en el borde superior */
+  border-image: linear-gradient(
+      to right,
+      hsl(37, 97%, 70%),
+      hsl(329, 70%, 58%)
+    )
+    1;
+}
+.youtube {
+  border-color: var(--youtube);
+}
+
+/* Texto principal de seguidores */
+.followers-count {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0.2rem 0;
+}
+
+/* "FOLLOWERS" / "SUBSCRIBERS" */
+.small {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+/* Cambios (Today) */
+.today {
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.today i {
+  font-size: 1rem;
+}
+
+/* Verde y rojo */
+.today.positive {
+  color: var(--lime-green);
+}
+.today.negative {
+  color: var(--bright-red);
+}
+.today.positive i {
+  color: var(--lime-green);
+}
+.today.negative i {
+  color: var(--bright-red);
+}
+
+/* ---- OVERVIEW ---- */
+.overview-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjetas de overview */
+.overview-card {
+  background-color: var(--card-bg);
+  border-radius: 5px;
+  padding: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.top-row h3 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 700;
+}
+
+.top-row i {
+  font-size: 1.2rem;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-count {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.overview-change {
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.overview-change i {
+  font-size: 1rem;
+}
+
+.overview-change.positive {
+  color: var(--lime-green);
+}
+.overview-change.negative {
+  color: var(--bright-red);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 600px) {
+  .header-texts h1 {
+    font-size: 1.5rem;
+  }
+  .followers-count {
+    font-size: 2.5rem;
+  }
+  .dashboard {
+    margin: -3rem 5% 2rem 5%;
+    padding: 4rem 1rem;
+  }
+}

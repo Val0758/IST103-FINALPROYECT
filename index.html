@@ -1,73 +1,214 @@
-<!-- Agrege el html e hice los divs de los cuadros de texto, me falta agreagr textos e logos de las apps
- admeas necesitamos pasar el estilo a css  y agregar el script-->
- <!DOCTYPE html>
- <html lang="en">
- <head>
-   <meta charset="UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>Social Media</title>
-   <link rel="stylesheet" href="style.css"> 
- </head>
- <body>
-   <div class="dashboard">
-     <div class="dashboard-header">
-       <h1>Social Media Dashboard</h1>
-
-       <div class="toggle-container">
-        <span >Dark Mode</span>
-        <label class="toggle-switch">
-            <input type="checkbox" class="theme">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Dashboard</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    
+    <header class="top-bar">
+      <div class="wrapper">
+        <div class="header-info">
+          <h1>Social Media Dashboard</h1>
+          <p class="total-followers">Total Followers: 23,004</p>
+        </div>
+        <div class="toggle-container">
+          <span>Dark Mode</span>
+          <label class="toggle-switch">
+            <input type="checkbox" class="theme" />
             <span class="slider"></span>
-        </label>
-    </div>      
-     </div>
- 
-     <div class="cards">
-       <div class="card facebook">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card twitter">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card instagram">
-         <p>FOLLOWERS</p>
-       </div>
-       <div class="card youtube">
-         <p>SUBSCRIBERS</p>
-       </div>
-     </div>
- 
-     <h2 style="margin-bottom: 1rem;">Overview - Today</h2>
- 
-     <div class="overview">
-       <div class="overview-card">
-         <h3>Page Views</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Facebook)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Instagram)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Profile Views</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Retweets</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (Twitter)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Likes (YouTube)</h3>
-       </div>
-       <div class="overview-card">
-         <h3>Total Views (YouTube)</h3>
-       </div>
-     </div>
-   </div>
-   <script src="js/script.js"></script>
+          </label>
+        </div>
+      </div>
+    </header>
 
- </body>
- </html>
- 
+   
+    <hr class="divider" />
+
+    
+    <main class="dashboard">
+      
+      <section class="cards">
+        
+        <div class="card facebook">
+          <div class="card-top">
+            <i class="fab fa-facebook-square"></i>
+            <span>@nathanf</span>
+          </div>
+          <p class="followers-count">1987</p>
+          <p class="small">FOLLOWERS</p>
+          <p class="today positive">
+            <i class="fas fa-caret-up"></i> 12 Today
+          </p>
+        </div>
+        
+        <div class="card twitter">
+          <div class="card-top">
+            <i class="fab fa-twitter"></i>
+            <span>@nathanf</span>
+          </div>
+          <p class="followers-count">1044</p>
+          <p class="small">FOLLOWERS</p>
+          <p class="today positive">
+            <i class="fas fa-caret-up"></i> 99 Today
+          </p>
+        </div>
+        
+        <div class="card instagram">
+          <div class="card-top">
+            <i class="fab fa-instagram"></i>
+            <span>@realnathanf</span>
+          </div>
+          <p class="followers-count">11k</p>
+          <p class="small">FOLLOWERS</p>
+          <p class="today positive">
+            <i class="fas fa-caret-up"></i> 1099 Today
+          </p>
+        </div>
+        
+        <div class="card youtube">
+          <div class="card-top">
+            <i class="fab fa-youtube"></i>
+            <span>Nathan F.</span>
+          </div>
+          <p class="followers-count">8239</p>
+          <p class="small">SUBSCRIBERS</p>
+          <p class="today negative">
+            <i class="fas fa-caret-down"></i> 144 Today
+          </p>
+        </div>
+      </section>
+
+      
+      <h2 class="overview-title">Overview - Today</h2>
+
+      
+      <section class="overview">
+        
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Page Views</h3>
+            <i class="fab fa-facebook-square"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">87</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 3%
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Likes</h3>
+            <i class="fab fa-facebook-square"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">52</p>
+            <p class="overview-change negative">
+              <i class="fas fa-caret-down"></i> 2%
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Likes</h3>
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">5462</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 2257%
+            </p>
+          </div>
+        </div>
+       
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Profile Views</h3>
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">52k</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 1375%
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Retweets</h3>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">117</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 303%
+            </p>
+          </div>
+        </div>
+       
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Likes</h3>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">507</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 553%
+            </p>
+          </div>
+        </div>
+       
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Likes</h3>
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">107</p>
+            <p class="overview-change negative">
+              <i class="fas fa-caret-down"></i> 19%
+            </p>
+          </div>
+        </div>
+        
+        <div class="overview-card">
+          <div class="top-row">
+            <h3>Total Views</h3>
+            <i class="fab fa-youtube"></i>
+          </div>
+          <div class="bottom-row">
+            <p class="overview-count">1407</p>
+            <p class="overview-change positive">
+              <i class="fas fa-caret-up"></i> 12%
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
+
+
