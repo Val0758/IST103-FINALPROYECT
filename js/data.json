@@ -1,59 +1,18 @@
-Dark Mode
-
-  
-
-  @nathanf
-  1987
-  Followers
-  12 Today
-
-  @nathanf
-  1044
-  Followers
-  99 Today
-
-  @realnathanf
-  11k
-  Followers
-  1099 Today
-
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
-
-
-
-  Overview - Today
-
-  Page Views
-  87
-  3%
-
-  Likes
-  52
-  2%
-
-  Likes
-  5462
-  2257%
-
-  Profile Views
-  52k
-  1375%
-
-  Retweets
-  117
-  303%
-
-  Likes
-  507
-  553%
-
-  Likes
-  107
-  19%
-
-  Total Views
-  1407
-  12%
+{
+  "users": [
+      { "username": "@nathanf", "followers": 1987, "changeToday": 12 },
+      { "username": "@nathanf", "followers": 1044, "changeToday": 99 },
+      { "username": "@realnathanf", "followers": "11k", "changeToday": 1099 },
+      { "username": "Nathan F.", "subscribers": 8239, "changeToday": 144 }
+  ],
+  "overview": [
+      { "category": "Page Views", "value": 87, "percentage": "3%" },
+      { "category": "Likes", "value": 52, "percentage": "2%" },
+      { "category": "Likes", "value": 5462, "percentage": "2257%" },
+      { "category": "Profile Views", "value": "52k", "percentage": "1375%" },
+      { "category": "Retweets", "value": 117, "percentage": "303%" },
+      { "category": "Likes", "value": 507, "percentage": "553%" },
+      { "category": "Likes", "value": 107, "percentage": "19%" },
+      { "category": "Total Views", "value": 1407, "percentage": "12%" }
+  ]
+}
