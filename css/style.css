@@ -19,52 +19,26 @@
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
    
-    --white-bg: hsl(0, 0%, 100%);
-    --very-pale-blue-top-bg: hsl(225, 100%, 98%);
-    --light-grayish-blue-card-bg: hsl(227, 47%, 96%);
-    --dark-grayish-blue-text: hsl(228, 12%, 44%);
-    --very-dark-blue-text: hsl(230, 17%, 14%);
-  
-  
-    --toggle-light: hsl(230, 22%, 74%);
   
     
-    --bg: var(--very-pale-blue-top-bg);
-    --card-bg: var(--light-grayish-blue-card-bg);
-    --text-primary: var(--very-dark-blue-text);
-    --text-secondary: var(--dark-grayish-blue-text);
-    --toggle-bg: var(--toggle-light);
-  }
-  
+    --bg: hsl(0, 0%, 100%);
+    --card-bg:  hsl(227, 47%, 96%);
+    --text-primary: hsl(230, 17%, 14%);
+    --text-secondary:  hsl(228, 12%, 44%);
+    --toggle-bg:hsl(230, 22%, 74%);
   
   body.dark-mode {
-   
-    --lime-green: hsl(163, 72%, 41%);
-    --bright-red: hsl(356, 69%, 56%);
-    --facebook: hsl(208, 92%, 53%);
-    --twitter: hsl(203, 89%, 53%);
-  
     
-    --very-dark-blue-bg: hsl(230, 17%, 14%);
-    --very-dark-blue-top-bg: hsl(232, 19%, 15%);
-    --dark-desaturated-blue-card-bg: hsl(228, 28%, 20%);
-    --desaturated-blue-text: hsl(228, 34%, 66%);
-    --white-text: hsl(0, 0%, 100%);
-  
     
-    --toggle-dark: linear-gradient(
+    --bg: hsl(230, 17%, 14%);
+    --card-bg: hsl(228, 28%, 20%);
+    --text-primary: hsl(0, 0%, 100%);
+    --text-secondary: hsl(228, 34%, 66%);
+    --toggle-bg: linear-gradient(
       hsl(210, 78%, 56%),
       hsl(146, 68%, 55%)
     );
-  
-    /
-    --bg: var(--very-dark-blue-top-bg);
-    --card-bg: var(--dark-desaturated-blue-card-bg);
-    --text-primary: var(--white-text);
-    --text-secondary: var(--desaturated-blue-text);
-    --toggle-bg: var(--toggle-dark);
   }
-  
   
   body {
     background-color: var(--bg);
@@ -148,7 +122,7 @@
     width: 18px;
     left: 4px;
     bottom: 3px;
-    background: var(--white-bg);
+    background: hsl(0, 0%, 100%);
     border-radius: 50%;
     transition: 0.3s;
   }
