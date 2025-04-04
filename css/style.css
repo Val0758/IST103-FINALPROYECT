@@ -57,7 +57,7 @@
       hsl(146, 68%, 55%)
     );
   
-    /
+    
     --bg: var(--very-dark-blue-top-bg);
     --card-bg: var(--dark-desaturated-blue-card-bg);
     --text-primary: var(--white-text);
@@ -160,11 +160,12 @@
   
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas fijas */
     gap: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
+  
   
   .card {
     background-color: var(--card-bg);
@@ -253,9 +254,12 @@
   
   .overview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, 1fr); 
     gap: 1.5rem;
+    max-width: 1200px; 
+    margin: 0 auto; 
   }
+  
   
   
   .overview-card {
