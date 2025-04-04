@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: 'Inter', sans-serif;
   transition: background-color 0.3s, color 0.3s;
@@ -20,17 +19,13 @@ body {
   --very-dark-blue: hsl(230, 17%, 14%);
   --toggle-light: hsl(230, 22%, 74%);
 
-
   --lime-green: hsl(163, 72%, 41%);
   --bright-red: hsl(356, 69%, 56%);
 
- 
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
   --youtube: hsl(348, 97%, 39%);
 
-
-  
   --background: var(--white-bg);
   --top-background: var(--very-pale-blue-top-bg);
   --text-primary: var(--very-dark-blue);
@@ -48,7 +43,6 @@ body.dark-mode {
   --toggle-bg: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
-
 body {
   background: var(--top-background);
   color: var(--text-primary);
@@ -62,7 +56,7 @@ body {
 }
 
 
-
+.wrapper {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -82,8 +76,10 @@ body {
   color: var(--text-secondary);
 }
 
+
+.dashboard {
   background: var(--background);
-  margin: -3rem 10% 2rem 10%; /* Subimos el fondo para que "flote" */
+  margin: -3rem 10% 2rem 10%; 
   border-radius: 8px;
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -91,7 +87,7 @@ body {
   z-index: 2;
 }
 
-/* Toggle Container */
+
 .toggle-container {
   display: flex;
   align-items: center;
@@ -113,7 +109,10 @@ body {
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: var(--toggle-bg);
   border-radius: 34px;
   transition: 0.3s;
@@ -165,7 +164,7 @@ input:checked + .slider:before {
   font-size: 1.4rem;
 }
 
-/* Bordes por red social */
+
 .facebook {
   border-color: var(--facebook);
 }
@@ -173,7 +172,7 @@ input:checked + .slider:before {
   border-color: var(--twitter);
 }
 .instagram {
-  /* Gradiente en el borde superior */
+  
   border-image: linear-gradient(
       to right,
       hsl(37, 97%, 70%),
@@ -185,13 +184,11 @@ input:checked + .slider:before {
   border-color: var(--youtube);
 }
 
-
 .followers-count {
   font-size: 3rem;
   font-weight: 700;
   margin: 0.2rem 0;
 }
-
 
 .small {
   font-size: 0.7rem;
@@ -200,7 +197,6 @@ input:checked + .slider:before {
   text-transform: uppercase;
   margin-bottom: 1rem;
 }
-
 
 .today {
   font-size: 0.85rem;
@@ -215,7 +211,6 @@ input:checked + .slider:before {
   font-size: 1rem;
 }
 
-
 .today.positive {
   color: var(--lime-green);
 }
@@ -229,7 +224,6 @@ input:checked + .slider:before {
   color: var(--bright-red);
 }
 
-
 .overview-title {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -241,7 +235,6 @@ input:checked + .slider:before {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
 }
-
 
 .overview-card {
   background-color: var(--card-bg);
@@ -297,7 +290,6 @@ input:checked + .slider:before {
   color: var(--bright-red);
 }
 
-
 @media (max-width: 600px) {
   .header-texts h1 {
     font-size: 1.5rem;
@@ -310,3 +302,4 @@ input:checked + .slider:before {
     padding: 4rem 1rem;
   }
 }
+
